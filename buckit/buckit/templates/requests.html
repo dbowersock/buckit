@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+	{% if current_requests %}
+    	<table class="table table-hover">
+    	<thead><tr>
+    		<th> Request Title </th>
+    		<th> Owner </th>
+    		<th> Amount </th>
+    	</tr></thead>
+    	
+    	{% for request in current_requests %}
+        	<tr>
+        		<td> <a href="/requests/{{ request.id }}/"> {{ request.title }} </a></td>
+        		<td> {{ request.owner }} </td>
+        		<td> $ {{ request.amount }} </td>
+        	</tr>
+    	{% endfor %}
+    	</table>
+	{% else %}
+    	<p>There are no open requests</p>
+	{% endif %}
+{% endblock %}

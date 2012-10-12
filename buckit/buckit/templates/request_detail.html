@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row">
+	<div class="span12">
+	<h1> {{ request.title }} </h1>
+	</div>
+	<div class="span2">
+	<a class="btn btn-success" href="#"><i class="icon-thumbs-up icon-white"></i> Contribute</a>
+	</div>
+	<div class="span4">
+	<i class="icon-arrow-right"></i> <strong>Owned By: {{ request.owner }} </strong>
+	<p class="text-info"> Needs ${{ request.amount }}.00 by {{ request.deadline }} </p>
+	
+	</div>
+{% endblock %}

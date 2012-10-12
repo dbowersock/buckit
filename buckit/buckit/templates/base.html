@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />
+    <link href='http://fonts.googleapis.com/css?family=Orienta' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Warnes' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cagliostro' rel='stylesheet' type='text/css'>
+    <title>{% block title %}Ahhh... Buckit{% endblock %}</title>
+
+
+</head>
+
+<body>
+    
+    <div class="container">
+    	
+    
+    
+    	<div class="navbar">
+    	<div class="navbar-inner">
+    		<a class="brand" href="#">Buckit!</a>
+        		{% block nav %}
+        		<ul class="nav">
+            		<li><a href="/">Home</a></li>
+            		<li><a href="/requests/">Current Requests</a></li>
+            		<li><a href="/login">Login</a></li>
+        		</ul>
+        	{% endblock %}
+        </div>
+    	</div>
+
+    	<div id="content">
+        	{% block content %}{% endblock %}
+    	</div>
+    </div>
+</body>
+</html>
